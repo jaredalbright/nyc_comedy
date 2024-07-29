@@ -1,13 +1,13 @@
 <script lang="ts">
+	import type { PageData } from '../$types';
 	import { page } from '$app/stores';
-    console.log("FUCK")
 
-    export async function load({ parent }) {
-        const { venue } = await parent();
-    }
+    export let data: PageData;
+    $: venue = data.target;
 </script>
 
-<h1>The Cellar</h1>
+<h1>{venue.club_name}</h1>
+<h4>{venue.neighborhood}</h4>
 <pre>
-    {JSON.stringify($page, null, 2)}
+    {JSON.stringify(venue, null, 2)}
 </pre>

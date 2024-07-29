@@ -105,7 +105,9 @@ const DatabaseClient = buildClient();
 
 const defaultOptions = {
   databaseURL:
-    "https://jaredalbright-s-workspace-iu66gn.us-east-1.xata.sh/db/venu"
+    "https://jaredalbright-s-workspace-iu66gn.us-east-1.xata.sh/db/venu",
+  apiKey:
+    "xau_OtFNmuoCRJACu61vu2uV8PSoxODAuHvsk1"
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
